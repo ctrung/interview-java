@@ -5,7 +5,7 @@
 ### Commands
 
 #### Listing
-```
+```sh
 > java --list-modules #lists the JDK’s set of modules
 
 java.activation@9.0.1
@@ -58,7 +58,7 @@ Example
 **-C** : which folder contains the files that should be included in the JAR and is followed by the files to include
 
 #### Running a jar file
-```
+```sh
 # entry point specified during jar creation
 > java --module-path jars com.deitel.welcome
 > java -p jars -m com.deitel.welcome
