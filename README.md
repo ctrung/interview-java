@@ -1,7 +1,7 @@
 # interview-java
 
-### Java 1.5
-* [generics](generics/README.md)
+###Java 1.5
+* [generics](generics)
 
-### java 9
-* [modules](modules/README.md)
+###Java 9
+* [modules](modules)

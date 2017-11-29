@@ -1,5 +1,7 @@
 # java-generics
 
+[<< summary](..)
+
 ##### Raw types allowed but compilation won't detect runtime errors
 ```java
 List<String> stringList = ...
