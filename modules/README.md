@@ -1,6 +1,6 @@
 # Java 9 modules
 
-[<< summary](..)
+[<< summary](../README.md)
 
 ###Commands
 

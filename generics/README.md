@@ -1,6 +1,6 @@
 # java-generics
 
-[<< summary](..)
+[<< summary](../README.md)
 
 ##### Raw types allowed but compilation won't detect runtime errors
 ```java
