@@ -2,9 +2,9 @@
 
 [<< summary](../README.md)
 
-###Commands
+### Commands
 
-#### Listing
+#### Listing
 ```
 > java --list-modules #lists the JDK’s set of modules
 
@@ -57,7 +57,7 @@ Example
 
 **-C** : which folder contains the files that should be included in the JAR and is followed by the files to include
 
-#### Running a jar file
+#### Running a jar file
 ```
 # entry point specified during jar creation
 > java --module-path jars com.deitel.welcome
@@ -71,37 +71,35 @@ Example
 
 
 
-###Glossary
-**module descriptor** : module-info.class
-**module declaration** : module-info.java 
-**module A read module B** :  module A requires module B
-**exploded-module folder** : structure folders containing the compiled code
-###Module directives
+### Glossary
+* **module descriptor** : module-info.class
+* **module declaration** : module-info.java 
+* **module A read module B** :  module A requires module B
+* **exploded-module folder** : structure folders containing the compiled code
 
-Keyword | Description|Example
------------- | ------------- | --------
+### Module directives
+
+Keyword | Description | Example
+------- | ----------- | -------
 module | module | ```module <modulename> { }```
-requires | dependency |  ```requires <modulename>;```
-requires static | dependency at compile time only  | ```requires static <modulename>;```
+requires | dependency |  ```requires <modulename>;```
+requires static | dependency at compile time only  | ```requires static <modulename>;```
 requires transitive | other modules reading your module also read that dependency |  ```requires transitive <modulename>;```
 exports | speciies one of the module’s packages whose public types should be accessible to code in all other modules | ```exports com.package;```
-exports...to | specify in a comma-separated list precisely which module’s or modules’ code can access the exported package | 
-uses | a service used by this module (a service is an object of a class that implements the interface or extends the abstract class speciied in the uses directive) | ```uses com.package.MyService;```
+exports...to | specify in a comma-separated list precisely which module’s or modules’ code can access the exported package | 
+uses | a service used by this module (a service is an object of a class that implements the interface or extends the abstract class speciied in the uses directive) | ```uses com.package.MyService;```
 provides...with | inverse of uses. a module provides a service implementation—making the module a service provider | 
-open, opens, and opens...to | allowing runtime-only access to a package (including reflection) |  ```opens package ```<br><br> ```opens package to comma-separated-list-of-modules ```<br><br> ```open module modulename { } ```
+open, opens, and opens...to | allowing runtime-only access to a package (including reflection) |  ```opens package ```<br><br> ```opens package to comma-separated-list-of-modules ```<br><br> ```open module modulename { } ```
 
-### App structure
+
+
+### App structure
 ```
 <AppFolder>
-|
 |__src
-     |
      |__<ModuleNameFolder>
-         |
          |__<PackageFolders>
-         |   |
          |   |__<JavaSourceCodeFiles>
-         |
          |__module-info.java
 ```
 
