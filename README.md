@@ -7,7 +7,20 @@ See [dedicated page](generics)
 See [dedicated page](modules)
 
 ### Process API (new)
-New classes *java.lang.ProcessHandler* and *java.lang.ProcessHandler.Info*.
+Before 9, OS specific
+```java
+// like 
+int pid = Integer.parseInt(new File("/proc/self").getCanonicalFile().getName());
+// or
+Process proc = Runtime.getRuntime().exec(new String[]{"/bin/sh", "-c", "echo $PPID"});
+if (proc.waitFor() == 0) {
+    InputStream in = proc.getInputStream();
+    String pid = new String(in.readAllBytes());
+    System.out.println("PID - " + pid);
+}
+```
+
+From 9, new classes *java.lang.ProcessHandler* and *java.lang.ProcessHandler.Info* are portable.
 ```java
 ProcessHandle.allProcesses()
     .filter(p -> p.info().command().isPresent())
